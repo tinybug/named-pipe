@@ -1,6 +1,10 @@
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required (VERSION 3.10)
 
 project(named_pipe)
+
+IF (WIN32)
+  include(${VCPKG_DIR}/scripts/buildsystems/vcpkg.cmake)
+ENDIF()
 
 set(Boost_USE_MULTITHREAD OFF)
 
